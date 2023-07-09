@@ -83,8 +83,6 @@ $resourceGroupName = "dp203-$suffix"
 
 # Choose a random region
 Write-Host "Finding an available region. This may take several minutes...";
-$delay = 0, 30, 60, 90, 120 | Get-Random
-Start-Sleep -Seconds $delay # random delay to stagger requests from multi-student classes
 $preferred_list = "eastus","southcentralus","westus3","australiaeast","northeurope","eastasia","uksouth","japaneast","canadacentral","francecentral","norwayeast"
 $locations = Get-AzLocation | Where-Object {
     $_.Providers -contains "Microsoft.Synapse" -and

@@ -52,8 +52,6 @@ Write-Host "Your randomly-generated suffix for Azure resources is $suffix"
 
 # Choose a region
 Write-Host "Preparing to deploy. This may take several minutes...";
-$delay = 0, 30, 60, 90, 120 | Get-Random
-Start-Sleep -Seconds $delay # random delay to stagger requests from multi-student classes
 
 # Get a list of locations for Azure Databricks
 $locations = Get-AzLocation | Where-Object {
